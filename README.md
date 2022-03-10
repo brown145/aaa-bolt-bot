@@ -5,7 +5,7 @@
 [ ] remember: generate keywords (nlp https://www.npmjs.com/package/node-nlp)
 [ ] remember: placeholder short desc (dumb)
 [ ] remember: placeholder short desc (nlp https://www.npmjs.com/package/node-nlp)
-[ ] remember: persist remembered threads (locally)
+[x] remember: persist remembered threads (locally)
 [ ] remember: persist remembered threads (aws)
 [x] recall: on post handler
 [ ] recall: get suggested remembered threads (dumb/local)

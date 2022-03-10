@@ -1,6 +1,4 @@
-import addMemory from "./db/addMemory.js";
 import boltjs from "@slack/bolt";
-import getMemories from "./db/getMemories.js";
 import help from "./features/help/index.js";
 import recall from "./features/recall/index.js";
 import remember from "./features/remember/index.js";
@@ -18,9 +16,6 @@ const app = new App({
 help(app);
 remember(app);
 recall(app);
-
-addMemory();
-getMemories();
 
 (async () => {
   // Start the app

@@ -20,9 +20,11 @@ export default async ({ shortcut, body, ack, client, logger }) => {
     message_ts: ts,
   });
 
-  const metadata = { ts, channel, permalink };
-
   const referenceMessage = await getParentmostMessage(client, channel, ts);
+
+  const referenceText = referenceMessage.text;
+
+  const metadata = { ts, channel, permalink, referenceText };
 
   try {
     const result = await client.views.open({
@@ -30,7 +32,7 @@ export default async ({ shortcut, body, ack, client, logger }) => {
       view: getView({
         keywords,
         metadata,
-        referenceText: referenceMessage.text,
+        referenceText,
       }),
     });
 
