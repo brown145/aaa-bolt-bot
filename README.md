@@ -1,7 +1,7 @@
 # Asked And Answered Slackbot
 A slackbot to help answer common questions 
 
-see: https://brown145.github.io/aaa-bolt-bot/
+demo: https://brown145.github.io/aaa-bolt-bot/
 
 ## Slack Setup
 Create a slack app and configure
@@ -87,7 +87,7 @@ Remove some of the required user intervention, make the bot "smarter". Use somet
 ### v0.1.1
 **Get more proactive**
 
-Eeduce the manual steps required for remembering and recalling for users
+Reduce the manual steps required for remembering and recalling for users
 
 #### TODO
 - [ ] remember: monitor for threads that seem resolved and ask if it should be remembered
