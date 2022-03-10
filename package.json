@@ -1,7 +1,7 @@
 {
   "name": "ana-bolt-bot",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A slackbot to help answer common questions",
   "exports": "./src/app.js",
   "engines": {
     "node": "^14.13.1 || >=16.0.0"
