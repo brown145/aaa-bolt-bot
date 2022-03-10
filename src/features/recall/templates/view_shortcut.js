@@ -1,6 +1,7 @@
-const { SUBMIT_CALLBACK_ID } = require("../consts.json");
+import CONSTS from "../consts.json" assert { type: "json" };
+const { SUBMIT_CALLBACK_ID } = CONSTS;
 
-module.exports = ({ referenceText, metadata, suggestedThreads }) => ({
+export default ({ referenceText, metadata, suggestedThreads }) => ({
   type: "modal",
   callback_id: SUBMIT_CALLBACK_ID,
   private_metadata: JSON.stringify(metadata),

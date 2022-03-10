@@ -1,8 +1,8 @@
-const getParentmostMessage = require("../../../util/getParentmostMessage");
-const getSuggestedThreads = require("../../../util/getSuggestedThreads");
-const getView = require("../templates/view_shortcut");
+import getParentmostMessage from "../../../util/getParentmostMessage.js";
+import getSuggestedThreads from "../../../util/getSuggestedThreads.js";
+import getView from "../templates/view_shortcut.js";
 
-module.exports = async ({ shortcut, ack, client, logger }) => {
+export default async ({ shortcut, ack, client, logger }) => {
   await ack();
 
   const { channel, message } = shortcut;

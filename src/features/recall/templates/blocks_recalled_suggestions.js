@@ -1,4 +1,4 @@
-module.exports = ({ answers, fromUserName }) => {
+export default ({ answers, fromUserName }) => {
   const answerBlocks = answers
     .reduce((aBlocks, { text, value }) => {
       aBlocks.push(

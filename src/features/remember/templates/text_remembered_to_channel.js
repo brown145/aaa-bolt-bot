@@ -1,4 +1,4 @@
-module.exports = ({ success, shortDesc, keywords }) =>
+export default ({ success, shortDesc, keywords }) =>
   success
     ? `Seems interesting. I will remember "${shortDesc}" with keywords: "${keywords.join(
         " "

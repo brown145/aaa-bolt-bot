@@ -1,4 +1,4 @@
-module.exports = (blocks, accumulator = []) => {
+export default (blocks, accumulator = []) => {
   blocks?.reduce((acc, block) => {
     if (block.text) {
       acc.push(block?.text?.text);

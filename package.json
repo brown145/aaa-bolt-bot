@@ -2,15 +2,22 @@
   "name": "ana-bolt-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "exports": "./src/app.js",
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
+  },
+  "type": "module",
   "scripts": {
-    "dev": "nodemon node app.js",
+    "dev": "nodemon --ignore './store/*' yarn start",
+    "start": "node --experimental-json-modules ./src/app.js",
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@slack/bolt": "^3.10.0"
+    "@slack/bolt": "^3.10.0",
+    "lowdb": "^3.0.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "jest": "^27.5.1"

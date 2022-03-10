@@ -1,6 +1,6 @@
-const getBlocks = require("../templates/blocks_help");
+import getBlocks from "../templates/blocks_help.js";
 
-module.exports = async ({ event, say }) => {
+export default async ({ event, say }) => {
   await say({
     thread_ts: event.thread_ts,
     text: "Bot help summary",

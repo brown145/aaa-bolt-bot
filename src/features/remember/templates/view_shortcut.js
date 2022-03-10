@@ -1,6 +1,7 @@
-const { SUBMIT_CALLBACK_ID } = require("../consts.json");
+import CONSTS from "../consts.json" assert { type: "json" };
+const { SUBMIT_CALLBACK_ID } = CONSTS;
 
-module.exports = ({ metadata, referenceText, keywords }) => {
+export default ({ metadata, referenceText, keywords }) => {
   const keywordOptions = keywords
     .slice(0, 7)
     .concat(["devportal", "scope", "oath"])

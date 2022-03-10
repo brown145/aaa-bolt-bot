@@ -1,5 +1,5 @@
-const helpHandler = require("./handlers/help_mention");
+import helpHandler from "./handlers/help_mention.js";
 
-module.exports = (app) => {
+export default (app) => {
   app.event("app_mention", helpHandler);
 };

@@ -1,7 +1,7 @@
-const getTextForUser = require("../templates/text_remembered_to_user");
-const getTextForChannel = require("../templates/text_remembered_to_channel");
+import getTextForChannel from "../templates/text_remembered_to_channel.js";
+import getTextForUser from "../templates/text_remembered_to_user.js";
 
-module.exports = async ({ ack, body, view, client, logger }) => {
+export default async ({ ack, body, view, client, logger }) => {
   await ack();
 
   const metadata = JSON.parse(view.private_metadata);

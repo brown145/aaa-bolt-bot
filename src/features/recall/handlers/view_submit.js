@@ -1,6 +1,6 @@
-const getBlocks = require("../templates/blocks_recalled_suggestions");
+import getBlocks from "../templates/blocks_recalled_suggestions.js";
 
-module.exports = async ({ ack, view, client, logger }) => {
+export default async ({ ack, view, client, logger }) => {
   await ack();
   const metadata = JSON.parse(view.private_metadata);
   const inputs = view.state.values;

@@ -1,8 +1,8 @@
-const getKeywords = require("../../../util/getKeywords");
-const getParentmostMessage = require("../../../util/getParentmostMessage");
-const getView = require("../templates/view_shortcut");
+import getKeywords from "../../../util/getKeywords.js";
+import getParentmostMessage from "../../../util/getParentmostMessage.js";
+import getView from "../templates/view_shortcut.js";
 
-module.exports = async ({ shortcut, body, ack, client, logger }) => {
+export default async ({ shortcut, body, ack, client, logger }) => {
   await ack();
 
   const { channel } = shortcut;

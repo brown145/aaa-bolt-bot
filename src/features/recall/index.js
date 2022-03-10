@@ -1,8 +1,10 @@
-const shortcutHandler = require("./handlers/shortcut");
-const viewSubmitHandler = require("./handlers/view_submit");
-const { TRIGGER_CALLBACK_ID, SUBMIT_CALLBACK_ID } = require("./consts.json");
+import shortcutHandler from "./handlers/shortcut.js";
+import viewSubmitHandler from "./handlers/view_submit.js";
+import CONSTS from "./consts.json" assert { type: "json" };
 
-module.exports = (app) => {
+const { SUBMIT_CALLBACK_ID, TRIGGER_CALLBACK_ID } = CONSTS;
+
+export default (app) => {
   const shortcutConfig = {
     callback_id: TRIGGER_CALLBACK_ID,
     type: "message_action",

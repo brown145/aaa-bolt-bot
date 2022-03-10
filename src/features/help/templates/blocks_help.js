@@ -1,4 +1,4 @@
-module.exports = ({ userName }) => [
+export default ({ userName }) => [
   {
     type: "section",
     text: {

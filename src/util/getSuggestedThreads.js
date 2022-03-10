@@ -1,4 +1,4 @@
-module.exports = () => [
+export default () => [
   {
     shortDesc: "Can someone approve my app?",
     link: "http://www.google.com",

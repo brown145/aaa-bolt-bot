@@ -1,7 +1,11 @@
-const { App } = require("@slack/bolt");
-const remember = require("./features/remember");
-const recall = require("./features/recall");
-const help = require("./features/help");
+import addMemory from "./db/addMemory.js";
+import boltjs from "@slack/bolt";
+import getMemories from "./db/getMemories.js";
+import help from "./features/help/index.js";
+import recall from "./features/recall/index.js";
+import remember from "./features/remember/index.js";
+
+const { App } = boltjs;
 
 const app = new App({
   appToken: process.env.SLACK_APP_TOKEN,
@@ -14,6 +18,9 @@ const app = new App({
 help(app);
 remember(app);
 recall(app);
+
+addMemory();
+getMemories();
 
 (async () => {
   // Start the app
