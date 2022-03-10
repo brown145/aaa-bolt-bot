@@ -1,1 +1,6 @@
-# Page for setting up and running app
+# Running Bot for Development
+
+```bash
+yarn install
+yarn dev
+```

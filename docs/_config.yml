@@ -4,8 +4,7 @@ title: Asked and Answered Slackbot
 description: A slackbot to help answer common questions
 baseurl: "/aaa-bolt-bot/"
 url: "https://brown145.github.io"
-logo: "/assets/book_bot.png"
-search_enabled: false
+logo: "/assets/logo.png"
 color_scheme: dark
 
 aux_links:
