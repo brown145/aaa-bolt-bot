@@ -1,7 +1,7 @@
 # Asked And Answered Slackbot
 A slackbot to help answer common questions 
 
-see: https://imgur.com/a/Z7tzung
+see: https://brown145.github.io/aaa-bolt-bot/
 
 ## Slack Setup
 Create a slack app and configure
