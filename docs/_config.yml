@@ -1,1 +1,13 @@
-theme: jekyll-theme-slate
+remote_theme: just-the-docs/just-the-docs
+
+title: Asked and Answered Slackbot
+description: A slackbot to help answer common questions
+baseurl: "/aaa-bolt-bot/"
+url: "https://brown145.github.io"
+logo: "/assets/book_bot.png"
+search_enabled: false
+color_scheme: dark
+
+aux_links:
+  "Asked and Answered on GitHub":
+    - "//github.com/brown145/aaa-bolt-bot"
