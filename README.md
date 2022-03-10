@@ -6,11 +6,9 @@ Create a slack app and configure
 
  1. go to https://api.slack.com/apps
  1. "create an app" > "from scratch" > ???
- 1. "Basic Information" > "App Credentials" > save "Signing Secret" to `.env` as "SLACK_SIGNING_SECRET"
  1. "Basic Information" > "Display Information" > setup name, image, ect...
  1. "Basic Information" > "App-Level Tokens" > ??? 
     * aaa-token | connections:write
- 1. "Basic Information" > "App-Level Tokens" > "aaa-token" > save token to `.env` as "SLACK_APP_TOKEN"
  1. "App Home" > ??? > Enable Bot, and set "name" and "always online"
  1. "Event Subscriptions" > enable
  1. "Event Subscriptions" > "Subscribe to bot events" (TODO: review list)
@@ -19,7 +17,6 @@ Create a slack app and configure
     * message.groups
     * message.im
     * message.mpim
- 1. "OAuth & Permissions" > "OAuth Tokens for Your Workspace" > find "Bot User OAuth Token" and save to `.env` as "SLACK_BOT_TOKEN" 
  1. "OAuth & Permissions" > "Scopes" > add/update (TODO: review list)
     * app_mentions:read
     * channels:history
@@ -31,6 +28,18 @@ Create a slack app and configure
  1. "Interactivity & Shortcuts" > "Shortcuts" > add
     * Recall Answer | Messages | aaa_recall
     * Remember Thread | Messages | aaa_remember
+ 1. build `.env` or otherwise manage env variables
+
+      ```bash
+         # OAuth & Permissions > OAuth Tokens for Your Workspace > Bot User OAuth Token
+         SLACK_BOT_TOKEN = XXX
+
+         # Basic Information > App-Level Tokens > aaa-token
+         SLACK_APP_TOKEN = XXX
+
+         # Basic Information > App Credentials" > Signing Secret
+         SLACK_SIGNING_SECRET = XXX
+      ```
 
 ## App Setup
 ```bash
@@ -55,11 +64,13 @@ yarn dev
  - [x] remember: persist remembered threads (locally)
  - [x] recall: on post handler
  - [x] remember: get text of question in both remember and recall
- - [ ] recall: get suggested remembered threads (dumb/local)
+ - [x] recall: get suggested remembered threads (dumb/local)
  - [x] recall: get text of question in both remember and recall
  - [x] help: respond to app mention
- - [ ] app: about page
 
+### v0.0.2
+ - [ ] handle no matching results in db on recall
+ - [ ] evergreen recall results?
 
 ### v0.1.0
 **Get Smarter**
@@ -69,6 +80,7 @@ Remove some of the required user intervention, make the bot "smarter". Use somet
 #### TODO
 - [ ] remember: generate keywords from full thread and more "smartly"
 - [ ] recall: create list of possible threads more "smartly"
+- [ ] recall: sort rank list of possible threads by match and return top X ???
 
 ### v0.1.1
 **Get more proactive**

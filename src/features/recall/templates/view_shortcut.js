@@ -1,7 +1,7 @@
 import CONSTS from "../consts.json" assert { type: "json" };
 const { SUBMIT_CALLBACK_ID } = CONSTS;
 
-export default ({ referenceText, metadata, suggestedThreads }) => ({
+export default ({ referenceText, metadata, memories }) => ({
   type: "modal",
   callback_id: SUBMIT_CALLBACK_ID,
   private_metadata: JSON.stringify(metadata),
@@ -45,13 +45,13 @@ export default ({ referenceText, metadata, suggestedThreads }) => ({
           text: "Select options",
           emoji: true,
         },
-        options: suggestedThreads.map(({ shortDesc, link }) => ({
+        options: memories.map(({ short_desc, permalink }) => ({
           text: {
             type: "plain_text",
-            text: shortDesc,
+            text: short_desc,
             emoji: true,
           },
-          value: link,
+          value: permalink,
         })),
         action_id: "answer-inputs",
       },

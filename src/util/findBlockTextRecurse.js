@@ -1,7 +1,7 @@
-export default (blocks, accumulator = []) => {
+const findBlockTextRecurse = (blocks, accumulator = []) => {
   blocks?.reduce((acc, block) => {
     if (block.text) {
-      acc.push(block?.text?.text);
+      acc.push(block?.text);
     }
 
     if (block.elements) {
@@ -13,3 +13,5 @@ export default (blocks, accumulator = []) => {
 
   return accumulator;
 };
+
+export default findBlockTextRecurse;

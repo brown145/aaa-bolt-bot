@@ -4,7 +4,5 @@ export default async (client, channel, ts) => {
     ts: ts,
   });
 
-  console.log("messages", messages[0].text);
-
   return messages[0];
 };

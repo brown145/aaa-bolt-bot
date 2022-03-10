@@ -1,3 +1,4 @@
+import findBlockTextRecurse from "../../../util/findBlockTextRecurse.js";
 import getKeywords from "../../../util/getKeywords.js";
 import getParentmostMessage from "../../../util/getParentmostMessage.js";
 import getView from "../templates/view_shortcut.js";
@@ -9,9 +10,9 @@ export default async ({ shortcut, body, ack, client, logger }) => {
 
   const ts = shortcut.message.thread_ts || shortcut.message.ts;
 
-  const keywordSourceText = body.message.text
-    ? body.message.text
-    : findBlockTextRecurse(body.message.blocks).join(" ");
+  const keywordSourceText = body.message.blocks.length
+    ? findBlockTextRecurse(body.message.blocks).join(" ")
+    : body.message.text;
 
   const keywords = getKeywords(keywordSourceText);
 

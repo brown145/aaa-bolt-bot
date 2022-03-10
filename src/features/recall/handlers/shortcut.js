@@ -1,5 +1,7 @@
+import findBlockTextRecurse from "../../../util/findBlockTextRecurse.js";
+import getKeywords from "../../../util/getKeywords.js";
+import getMemories from "../../../db/getMemories.js";
 import getParentmostMessage from "../../../util/getParentmostMessage.js";
-import getSuggestedThreads from "../../../util/getSuggestedThreads.js";
 import getView from "../templates/view_shortcut.js";
 
 export default async ({ shortcut, ack, client, logger }) => {
@@ -16,7 +18,13 @@ export default async ({ shortcut, ack, client, logger }) => {
     from: message.user,
   };
 
-  const suggestedThreads = getSuggestedThreads();
+  const keywordSourceText = referenceMessage.blocks.length
+    ? findBlockTextRecurse(referenceMessage.blocks).join(" ")
+    : referenceMessage.text;
+
+  const keywords = getKeywords(keywordSourceText);
+
+  const memories = getMemories(keywords);
 
   try {
     const result = await client.views.open({
@@ -24,7 +32,7 @@ export default async ({ shortcut, ack, client, logger }) => {
       view: getView({
         metadata,
         referenceText: referenceMessage.text,
-        suggestedThreads,
+        memories,
       }),
     });
 
