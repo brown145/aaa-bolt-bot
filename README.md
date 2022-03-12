@@ -7,16 +7,20 @@ demo: https://brown145.github.io/aaa-bolt-bot/
 Create a slack app and configure
 See manual process in `/docs` or use app manifest `/slack_config.yml`
 
-```bash
-   # OAuth & Permissions > OAuth Tokens for Your Workspace > Bot User OAuth Token
-   SLACK_BOT_TOKEN = XXX
+1 . generate app token `aaa-token` for `connections:write`
+1. install app
+1. build `.env`
 
-   # Basic Information > App-Level Tokens > aaa-token
-   SLACK_APP_TOKEN = XXX
+   ```bash
+      # OAuth & Permissions > OAuth Tokens for Your Workspace > Bot User OAuth Token
+      SLACK_BOT_TOKEN = XXX
 
-   # Basic Information > App Credentials" > Signing Secret
-   SLACK_SIGNING_SECRET = XXX
-```
+      # Basic Information > App-Level Tokens > aaa-token
+      SLACK_APP_TOKEN = XXX
+
+      # Basic Information > App Credentials" > Signing Secret
+      SLACK_SIGNING_SECRET = XXX
+   ```
 
 ## App Setup
 ```bash
