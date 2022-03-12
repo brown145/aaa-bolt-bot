@@ -1,0 +1,40 @@
+display_information:
+  name: Asked and Answered
+  description: Bot to help answer common questions
+  background_color: "#284a70"
+features:
+  bot_user:
+    display_name: Asked and Answered
+    always_online: true
+  shortcuts:
+    - name: Recall Answer
+      type: message
+      callback_id: aaa_recall
+      description: Recall previous answers to similar questions
+    - name: Remember Thread
+      type: message
+      callback_id: aaa_remember
+      description: Save question and answers for later recall
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - chat:write
+      - groups:history
+      - im:history
+      - mpim:history
+      - app_mentions:read
+      - commands
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_mention
+      - message.channels
+      - message.groups
+      - message.im
+      - message.mpim
+  interactivity:
+    is_enabled: true
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false

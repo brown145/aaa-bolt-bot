@@ -1,6 +1,11 @@
 # Slack Configuration
 
-Create a slack app and configure
+## Create a slack app and configure
+
+### From configuration file:
+see `/slack_config.yml`
+
+### Manually using UI
 
  1. go to https://api.slack.com/apps
  1. "create an app" > "from scratch" > ???
@@ -26,7 +31,9 @@ Create a slack app and configure
  1. "Interactivity & Shortcuts" > "Shortcuts" > add
     * Recall Answer | Messages | aaa_recall
     * Remember Thread | Messages | aaa_remember
- 1. build `.env` or otherwise manage env variables
+ 
+ 
+ ## build `.env` or otherwise manage env variables
 
       ```bash
          # OAuth & Permissions > OAuth Tokens for Your Workspace > Bot User OAuth Token
