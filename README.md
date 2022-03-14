@@ -60,9 +60,9 @@ yarn dev
 
 ### v0.0.4
  - [x] handle no matching results in db on recall
- - [ ] evergreen recall results? - add on home view?
+ - [x] evergreen recall results? - add on home view?
    - [x] add / remove FAQ
-   - [ ] allow for FAQ recall
+   - [x] allow for FAQ recall
 
 ### v0.1.0
 **Get Smarter**
