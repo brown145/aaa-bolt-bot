@@ -7,7 +7,7 @@ demo: https://brown145.github.io/aaa-bolt-bot/
 Create a slack app and configure
 See manual process in `/docs` or use app manifest `/slack_config.yml`
 
-1 . generate app token `aaa-token` for `connections:write`
+1. generate app token `aaa-token` for `connections:write`
 1. install app
 1. add image from `docs/assets/book_bot.png` for Display Information > Bot Icon
 1. build `.env`
