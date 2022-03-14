@@ -55,12 +55,12 @@ yarn dev
  - [x] add slash commands for "help"
 
 ### v0.0.3
- - [ ] build out app Home tab: https://api.slack.com/surfaces/tabs
+ - [x] build out app Home tab: https://api.slack.com/surfaces/tabs
    - perhaps management remove/edit remebered content here
 
 ### v0.0.4
  - [ ] handle no matching results in db on recall
- - [ ] evergreen recall results?
+ - [ ] evergreen recall results? - add on home view?
 
 ### v0.1.0
 **Get Smarter**

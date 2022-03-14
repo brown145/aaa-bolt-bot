@@ -1,5 +1,6 @@
 import boltjs from "@slack/bolt";
 import help from "./features/help/index.js";
+import home from "./features/home/index.js";
 import recall from "./features/recall/index.js";
 import remember from "./features/remember/index.js";
 
@@ -13,7 +14,9 @@ const app = new App({
   port: process.env.PORT || 3000,
 });
 
+// Register features
 help(app);
+home(app);
 remember(app);
 recall(app);
 

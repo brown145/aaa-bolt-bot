@@ -3,6 +3,10 @@ display_information:
   description: Bot to help answer common questions
   background_color: "#284a70"
 features:
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: false
+    messages_tab_read_only_enabled: true
   bot_user:
     display_name: Asked and Answered
     always_online: true
@@ -17,7 +21,7 @@ features:
       description: Recall previous answers to similar questions
   slash_commands:
     - command: /aaa
-      description: Remember this this question/answer for later recall
+      description: See useage instructions
       usage_hint: help
       should_escape: false
 oauth_config:
@@ -33,6 +37,7 @@ oauth_config:
 settings:
   event_subscriptions:
     bot_events:
+      - app_home_opened
       - app_mention
       - message.channels
       - message.groups

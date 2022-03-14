@@ -1,6 +1,6 @@
 import findBlockTextRecurse from "../../../util/findBlockTextRecurse.js";
 import getKeywords from "../../../util/getKeywords.js";
-import getMemories from "../../../db/getMemories.js";
+import getMemories from "../../../db/getMemoriesByKeywords.js";
 import getParentmostMessage from "../../../util/getParentmostMessage.js";
 import getView from "../templates/view_shortcut.js";
 
