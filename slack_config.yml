@@ -7,14 +7,19 @@ features:
     display_name: Asked and Answered
     always_online: true
   shortcuts:
-    - name: Recall Answer
-      type: message
-      callback_id: aaa_recall
-      description: Recall previous answers to similar questions
     - name: Remember Thread
       type: message
       callback_id: aaa_remember
       description: Save question and answers for later recall
+    - name: Recall Answer
+      type: message
+      callback_id: aaa_recall
+      description: Recall previous answers to similar questions
+  slash_commands:
+    - command: /aaa
+      description: Remember this this question/answer for later recall
+      usage_hint: help
+      should_escape: false
 oauth_config:
   scopes:
     bot:

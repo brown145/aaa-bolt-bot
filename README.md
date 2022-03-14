@@ -9,6 +9,7 @@ See manual process in `/docs` or use app manifest `/slack_config.yml`
 
 1 . generate app token `aaa-token` for `connections:write`
 1. install app
+1. add image from `docs/assets/book_bot.png` for Display Information > Bot Icon
 1. build `.env`
 
    ```bash
@@ -50,6 +51,14 @@ yarn dev
  - [x] help: respond to app mention
 
 ### v0.0.2
+ - [ ] ~~add slash commands for remember/recall~~ slash commands not suppored in threads
+ - [x] add slash commands for "help"
+
+### v0.0.3
+ - [ ] build out app Home tab: https://api.slack.com/surfaces/tabs
+   - perhaps management remove/edit remebered content here
+
+### v0.0.4
  - [ ] handle no matching results in db on recall
  - [ ] evergreen recall results?
 
