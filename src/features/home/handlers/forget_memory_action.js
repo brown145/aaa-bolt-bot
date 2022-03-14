@@ -1,7 +1,7 @@
 import home_opened from "./home_opened.js";
-import removeMemory from "../../../db/removeMemory.js";
+import removeMemory from "../../../db/memories/removeOne.js";
 
-export default async ({ event, body, client, ack, logger }) => {
+export default async ({ body, client, ack, logger }) => {
   await ack();
   try {
     const id = body.actions[0].value;

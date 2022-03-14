@@ -59,8 +59,10 @@ yarn dev
    - perhaps management remove/edit remebered content here
 
 ### v0.0.4
- - [ ] handle no matching results in db on recall
+ - [x] handle no matching results in db on recall
  - [ ] evergreen recall results? - add on home view?
+   - [x] add / remove FAQ
+   - [ ] allow for FAQ recall
 
 ### v0.1.0
 **Get Smarter**

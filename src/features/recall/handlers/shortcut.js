@@ -1,10 +1,12 @@
 import findBlockTextRecurse from "../../../util/findBlockTextRecurse.js";
+import getFAQs from "../../../db/faq/getByChannel.js";
 import getKeywords from "../../../util/getKeywords.js";
-import getMemories from "../../../db/getMemoriesByKeywords.js";
+import getMemories from "../../../db/memories/getByKeywords.js";
+import getNoMoriesBlocks from "../templates/blocks_no_recalled_suggestions.js";
 import getParentmostMessage from "../../../util/getParentmostMessage.js";
 import getView from "../templates/view_shortcut.js";
 
-export default async ({ shortcut, ack, client, logger }) => {
+export default async ({ shortcut, ack, client, say, logger }) => {
   await ack();
 
   const { channel, message } = shortcut;
@@ -18,7 +20,7 @@ export default async ({ shortcut, ack, client, logger }) => {
     from: message.user,
   };
 
-  const keywordSourceText = referenceMessage.blocks.length
+  const keywordSourceText = referenceMessage.blocks?.length
     ? findBlockTextRecurse(referenceMessage.blocks).join(" ")
     : referenceMessage.text;
 
@@ -26,13 +28,26 @@ export default async ({ shortcut, ack, client, logger }) => {
 
   const memories = getMemories(keywords);
 
+  const faqs = getFAQs(metadata.channel.id);
+
+  if (!memories?.length && !faqs?.length) {
+    say({
+      channel: metadata.channel.id,
+      thread_ts: metadata.ts,
+      text: "No recalled answers.",
+      blocks: getNoMoriesBlocks(),
+    });
+    return;
+  }
+
   try {
-    const result = await client.views.open({
+    await client.views.open({
       trigger_id: shortcut.trigger_id,
       view: getView({
         metadata,
         referenceText: referenceMessage.text,
         memories,
+        faqs,
       }),
     });
 

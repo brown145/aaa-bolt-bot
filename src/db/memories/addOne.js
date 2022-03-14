@@ -1,4 +1,4 @@
-import db from "./index.js";
+import db from "./db.js";
 import { v4 as uuidv4 } from "uuid";
 import defaultObject from "./defaultObject.json" assert { type: "json" };
 

@@ -1,8 +1,8 @@
-import addMemory from "../../../db/addMemory.js";
+import addMemory from "../../../db/memories/addOne.js";
 import getTextForChannel from "../templates/text_remembered_to_channel.js";
 import getTextForUser from "../templates/text_remembered_to_user.js";
 
-export default async ({ ack, body, view, client }) => {
+export default async ({ ack, body, view, client, logger }) => {
   await ack();
 
   const metadata = JSON.parse(view.private_metadata);
