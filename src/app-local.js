@@ -1,8 +1,5 @@
 import boltjs from "@slack/bolt";
-import help from "./features/help/index.js";
-import home from "./features/home/index.js";
-import recall from "./features/recall/index.js";
-import remember from "./features/remember/index.js";
+import registerFeatures from "./features/register.js";
 
 const { App } = boltjs;
 
@@ -15,10 +12,7 @@ const app = new App({
 });
 
 // Register features
-help(app);
-home(app);
-remember(app);
-recall(app);
+registerFeatures(app);
 
 (async () => {
   // Start the app

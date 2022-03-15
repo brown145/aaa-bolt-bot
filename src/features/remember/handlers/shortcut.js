@@ -28,7 +28,7 @@ export default async ({ shortcut, body, ack, client, logger }) => {
   const metadata = { ts, channel, permalink, referenceText };
 
   try {
-    const result = await client.views.open({
+    await client.views.open({
       trigger_id: shortcut.trigger_id,
       view: getView({
         keywords,

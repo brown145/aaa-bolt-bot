@@ -1,5 +1,4 @@
-import CONSTS from "../consts.json" assert { type: "json" };
-const { ADD_FAQ_CALLBACK_ID } = CONSTS;
+import { ADD_FAQ_CALLBACK_ID } from "../consts.js";
 
 export default ({ metadata }) => ({
   type: "modal",

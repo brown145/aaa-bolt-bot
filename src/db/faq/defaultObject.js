@@ -1,0 +1,7 @@
+export default {
+  id: "invalid",
+  channel: "",
+  permalink: "",
+  short_desc: "",
+  slack_user_creator: "",
+};

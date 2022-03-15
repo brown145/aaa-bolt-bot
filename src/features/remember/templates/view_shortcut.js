@@ -1,5 +1,4 @@
-import CONSTS from "../consts.json" assert { type: "json" };
-const { SUBMIT_CALLBACK_ID } = CONSTS;
+import { SUBMIT_CALLBACK_ID } from "../consts.js";
 
 export default ({ metadata, referenceText, keywords }) => {
   const keywordOptions = keywords

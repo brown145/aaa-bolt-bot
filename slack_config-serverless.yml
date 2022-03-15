@@ -1,0 +1,53 @@
+display_information:
+  name: Asked and Answered
+  description: Bot to help answer common questions
+  background_color: "#284a70"
+features:
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: true
+    messages_tab_read_only_enabled: true
+  bot_user:
+    display_name: Asked and Answered
+    always_online: true
+  shortcuts:
+    - name: Remember Thread
+      type: message
+      callback_id: aaa_remember
+      description: Save question and answers for later recall
+    - name: Recall Answer
+      type: message
+      callback_id: aaa_recall
+      description: Recall previous answers to similar questions
+  slash_commands:
+    - command: /aaa
+      url: https://1ef4-50-39-137-182.ngrok.io
+      description: See useage instructions
+      usage_hint: help
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - chat:write
+      - groups:history
+      - im:history
+      - mpim:history
+      - app_mentions:read
+      - commands
+settings:
+  event_subscriptions:
+    request_url: http://171b-50-39-137-182.ngrok.io/slack/events
+    bot_events:
+      - app_home_opened
+      - app_mention
+      - message.channels
+      - message.groups
+      - message.im
+      - message.mpim
+  interactivity:
+    is_enabled: true
+    request_url: https://1ef4-50-39-137-182.ngrok.io
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

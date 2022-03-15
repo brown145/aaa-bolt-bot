@@ -1,6 +1,6 @@
 import db from "./db.js";
+import defaultObject from "./defaultObject.js";
 import { v4 as uuidv4 } from "uuid";
-import defaultObject from "./defaultObject.json" assert { type: "json" };
 
 export default (saveObject) => {
   if (!saveObject || !saveObject.link || !saveObject.slack_user_creator) {

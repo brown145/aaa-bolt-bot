@@ -1,10 +1,8 @@
-import CONSTS from "../consts.json" assert { type: "json" };
-
-const {
+import {
   SUBMIT_ADD_FAQ_ACTION,
   SUBMIT_FORGET_FAQ_ACTION,
   SUBMIT_FORGET_MEMORY_ACTION,
-} = CONSTS;
+} from "../consts.js";
 
 const sortByShortDesc = (a, b) => (a.short_desc > b.short_desc ? 1 : -1);
 const sortByChannel = (a, b) => (a.channel > b.channel ? 1 : -1);

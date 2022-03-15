@@ -1,6 +1,0 @@
-{
-    "SUBMIT_FORGET_MEMORY_ACTION": "aaa_forget_memory_submit",
-    "SUBMIT_FORGET_FAQ_ACTION": "aaa_forget_faq_submit",
-    "SUBMIT_ADD_FAQ_ACTION": "aaa_add_faq",
-    "ADD_FAQ_CALLBACK_ID": "aaa_add_faq_callback"
-}

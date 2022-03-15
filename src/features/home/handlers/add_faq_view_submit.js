@@ -4,7 +4,8 @@ import home_opened from "./home_opened.js";
 export default async ({ ack, body, view, client, logger }) => {
   await ack();
 
-  const metadata = JSON.parse(view.private_metadata);
+  // Dev Note:
+  // const metadata = JSON.parse(view.private_metadata);
   const inputs = view.state.values;
 
   addFAQ({
